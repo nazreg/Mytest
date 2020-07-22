@@ -156,6 +156,7 @@ MongoClient.connect(url, { useUnifiedTopology: true })
   })
   .catch(console.error);
 
+//using PORT define above
 http.listen(PORT, () => {
   console.log("listening on *:3000");
 });
