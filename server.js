@@ -28,12 +28,18 @@ app.get("/", (req, res) => {
 });
 
 // Connection URL
-const url = "mongodb://localhost:27017";
+const db_url =
+  process.env.MONGOLAB_URI !== undefined
+    ? process.env.MONGOLAB_URI
+    : "mongodb://localhost:27017";
 
 // Database Name
-const dbName = "ackchat";
+const dbName =
+  process.env.MONGOLAB_DBNAME !== undefined
+    ? process.env.MONGOLAB_DBNAME
+    : "ackchat";
 
-MongoClient.connect(url, { useUnifiedTopology: true })
+MongoClient.connect(db_url, { useUnifiedTopology: true })
   .then((client) => {
     console.log("Connected to Database");
     const db = client.db(dbName);
