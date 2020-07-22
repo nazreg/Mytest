@@ -39,7 +39,7 @@ const dbName =
     ? process.env.MONGOLAB_DBNAME
     : "ackchat";
 
-MongoClient.connect(db_url, { useUnifiedTopology: true })
+MongoClient.connect(db_url, { useUnifiedTopology: false })
   .then((client) => {
     console.log("Connected to Database");
     const db = client.db(dbName);
