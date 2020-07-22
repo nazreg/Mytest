@@ -1,0 +1,30 @@
+{
+  "name": "ack-ack",
+  "version": "1.0.0",
+  "description": "Chat web app using Node.js and Socket.io",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ack-Chat/ack.git"
+  },
+  "author": "Jane Jiang, Tucker Chase, Marcelo Nazario",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ack-Chat/ack/issues"
+  },
+  "homepage": "https://github.com/Ack-Chat/ack#README",
+  "dependencies": {
+    "aws-sdk": "^2.716.0",
+    "body": "^5.1.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "moment": "^2.27.0",
+    "mongodb": "^3.5.9",
+    "parser": "^0.1.4",
+    "socket.io": "^2.3.0"
+  }
+}

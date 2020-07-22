@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ack Chat</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+  </head>
+  <body>
+    <header class="header-1">
+      <h2 class="text-center pt-2">Ack Chat!</h2>
+    </header>
+    <!-- Username form -->
+    <div id="username-form" class="container mt-4">
+      <form id="login" class="form-inline m-2 my-lg-0 p-2 bg-secondary row">
+        <input
+          id="username"
+          name="username"
+          class="form-control ml-3 mr-sm-2 w-75 col"
+          type="text"
+          placeholder="Username"
+          aria-label="Username"
+          required
+        />
+        <input
+          class="btn btn-success mr-2 my-2 my-sm-0 col-2"
+          type="submit"
+          value="Submit"
+        />
+      </form>
+    </div>
+    <!-- Chat section -->
+    <div class="container-1">
+      <div id="chat-section" class="chat-1 row container-fluid hide">
+        <!-- Messages container -->
+        <div id="chat-messages" class="col container-fluid bg-secondary p-3">
+          <div>
+            <ul id="chat-list"></ul>
+            <p id="typing-output"></p>
+          </div>
+        </div>
+        <!--users container  -->
+        <div id="users" class="col-3 container-fluid p-2 bg-primary">
+          <h4 class="text-center bg-white">Users</h4>
+          <ul class="bg-white rounded" id="users-list"></ul>
+        </div>
+      </div>
+
+      <!-- Chat bar container -->
+      <div id="chat-bar-container" class="container-fluid p-2 hide">
+        <form
+          id="chat-bar"
+          class="form-inline my-2 my-lg-0 bg-secondary chat-bar row"
+        >
+          <input
+            id="message"
+            class="form-control mx-3 mr-sm-2 w-75 col"
+            type="text"
+            placeholder="New chat message"
+            aria-label="Chat"
+          />
+          <button class="btn btn-success mr-3 my-2 my-sm-0 col-2" type="submit">
+            Send
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
