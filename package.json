@@ -25,6 +25,6 @@
     "moment": "^2.27.0",
     "mongodb": "^3.5.9",
     "parser": "^0.1.4",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.5.0"
   }
 }
